@@ -33,7 +33,6 @@
         };
 
     $document.ready(function () {
-
         var $postContent = $(".post-content");
         $postContent.fitVids();
 
@@ -58,7 +57,6 @@
         $(window).smartresize(casperFullImg);
 
         $(".scroll-down").arctic_scroll();
-
     });
 
     // smartresize
@@ -67,7 +65,6 @@
     // Arctic Scroll by Paul Adam Davis
     // https://github.com/PaulAdamDavis/Arctic-Scroll
     $.fn.arctic_scroll = function (options) {
-
         var defaults = {
             elem: $(this),
             speed: 500
@@ -93,6 +90,5 @@
                 $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top) }, allOptions.speed);
             }
         });
-
     };
 })(jQuery, 'smartresize');

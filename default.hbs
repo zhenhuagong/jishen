@@ -36,8 +36,14 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/jquery.ghostrelated.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/ga.js"}}"></script>
+
+    {{! Include those JavaScript files which only apply for post page while have dependency on jQuery}}
+    {{#is "post"}}
+        <script type="text/javascript" src="{{asset "js/post.js"}}"></script>
+    {{/is}}
 </body>
 </html>
