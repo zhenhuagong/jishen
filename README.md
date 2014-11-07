@@ -9,19 +9,20 @@ http://docs.ghost.org/zh/themes/
 **Must**
 
 * Global
-  * Make a header menu with 3 items
-    * Home, Subscribe, My Website
+  * Make a header menu with 2 items
+    * Subscribe, MyWebsite
   * Add more info into the cover of home page
-    * Add links under tag line _(Github, Website)_
+    * Make it a partial and you can customize as you like
   * Set a proper font style for Chinese
-    * Option: Microsoft Yahei
+    * "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑"
   * Add Google analytic
 * Post
   * Add a comment plugin
     * Lazy loaded, or click to load
   * Add weibo into post share list
   * Set a better style for code block
-    * Option: [Prismjs](http://prismjs.com/)
+    * Use [Prismjs](http://prismjs.com/) with Okaidia theme.
+    * Language Support: CSS/C/JavaScript/Java/PHP/Bash/Python/Git
   * Add an overlay block of navigation outline for post content
 
 **Try**
