@@ -1,12 +1,18 @@
-# Ghost-Jishen
+# Jishen
 
-A theme for [Ghost](http://github.com/tryghost/ghost/), made by [Gong Zhenhua](http://allmyverse.com/about-me.php).
+A theme for [Ghost](http://github.com/tryghost/ghost/), made by [Jishen 龚振华](http://allmyverse.com/about-me.php).
 
-#### Tutorials of writing your own theme for Ghost
-http://docs.ghost.org/zh/themes/
+See Jishen in action at: [Blog - 姫神](http://blog.allmyverse.com)
 
-## To-Do List
-**Must**
+###Tutorials of writing your own theme for Ghost
+
+* http://themes.ghost.org/v0.5.3/docs/about _(Make sure you go through **DOCUMENTATION** part)_
+* http://docs.ghost.org/zh/themes/ _(Just in case you feel more comfortable with document in Chinese)_
+
+# Features
+Jishen is still in progress.
+
+## Must for next release
 
 * Global
   * ~~_[Done]_~~ Make a header menu with 2 items
@@ -20,19 +26,20 @@ http://docs.ghost.org/zh/themes/
 * Post
   * Add a comment plugin
     * Lazy loaded, or click to load
-  * Add weibo into post share list
+  * Add weibo into share list
   * ~~_[Done]_~~ Set a better style for code block
     * Use [Prismjs](http://prismjs.com/) with Okaidia theme.
     * Language Support: CSS/C/JavaScript/Java/PHP/Bash/Python/Git
-  * Add an overlay block of navigation outline for post content
+  * Add an overlay of navigation outline for post content
 
-**Try**
+## Try for next release
 * Global
   * Performance improvement for images
     * Use WebP
     * Lazy load
   * Add search function
-    * Probably need to build an independent search service
+    * Option1: Build an independent search service
+    * Option2: Search directly based on internal RSS output without index
   * Archive by date
     * Probably need code injection into core of Ghost
 * Post
