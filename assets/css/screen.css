@@ -710,6 +710,11 @@ margin on the iframe, cause it breaks stuff. */
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
+
+.home-template .page-title a {
+    text-decoration: none;
+}
+
 .home-template .page-description {
     -webkit-animation: fade-in-down 0.9s;
     animation: fade-in-down 0.9s;
