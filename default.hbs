@@ -43,6 +43,7 @@
 
     {{! Include those JavaScript files which only apply for post page while have dependency on jQuery}}
     {{#is "post"}}
+        <script type="text/javascript" src="{{asset "js/post_toc_gen.js"}}"></script>
         <script type="text/javascript" src="{{asset "js/post.js"}}"></script>
     {{/is}}
 </body>

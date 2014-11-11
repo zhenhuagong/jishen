@@ -9,3 +9,9 @@
 //     limit: 3,
 //     debug: false
 // });
+
+PostToc.generate({
+  tocParentId: '#toc',
+  postClass: '.post-content',
+  depth: 4
+});
