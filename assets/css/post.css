@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+#toc-wrapper {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 1.5;
+  background-color: #F5F5DC;
+  /*transition: all 1s ease-in;*/
+}
+
+#toc-wrapper.show {
+  width: 238px;
+  padding: 5px;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  border-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.4);
+}
+
+#toc-wrapper .header {
+  font-weight: bold;
+  padding-bottom: 7px;
+  font-size: 1.25em;
+}
+
+#toc {
+  position: relative;
+  overflow: hidden;
+}
+
+#toc ul{
+  font-family: sans-serif, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";
+  margin: 0 0.125em;
+  padding-left: 0.75em;
+}
+
+#toc li{
+  margin: 0;
+  padding: 0;
+}
+
+#toc li:hover {
+  background: #f6f6f6;
+}
+
+#toc li a {
+  text-decoration: none;
+}

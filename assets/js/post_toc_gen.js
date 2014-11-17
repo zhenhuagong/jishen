@@ -35,7 +35,9 @@ var PostToc = (function($){
           if (start > _.headerDepth) {
             return;
           }
+          _.tocResult.push('<ul>');
           var toc = _.buildToc(start, _.headerDepth);
+          _.tocResult.push('</ul>');
           _.$tocParent.html(toc);
         }else{
           // `tocParentId` needs to be specified
