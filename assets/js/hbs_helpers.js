@@ -49,7 +49,7 @@ var registerHelper = function () {
     * TODO: Need to find a way to alter DOM element in hbs helpers
     */
     var getHeadlines = function(start, end, current, elem) {
-      if(current > end || start > end) { return; }
+      if(parseInt(current) > parseInt(end)) { return; }
       if(_.isUndefined(current)) {
         $('h' + start).each(function(i, elem) {
           var headerElem = $(elem);
@@ -60,26 +60,30 @@ var registerHelper = function () {
           toc.push('<li><a href="#' + $(elem).attr('id') + '">' + $(elem).text() + '</a></li>');
           getHeadlines(start, end, parseInt(start) + 1, elem);
         });
-      } else if($(elem).nextUntil('h' + (parseInt(current) - 1), 'h' + current).length !== 0) {
-        toc.push('<ul>');
-        $(elem).nextUntil('h' + (parseInt(current) - 1), 'h' + current).each(function(i, elem) {
-          toc.push('<li><a href="#' + $(elem).attr('id') + '">' + $(elem).text() + '</a></li>');
-          getHeadlines(start, end, parseInt(current) + 1, elem);
-        });
-        toc.push('</ul>');
+      } else {
+        var $subHeaders = $(elem).nextUntil('h' + (parseInt(current) - 1), 'h' + current);
+        if($subHeaders.length !== 0) {
+          toc.push('<ul>');
+          $subHeaders.each(function(i, elem) {
+            toc.push('<li><a href="#' + $(elem).attr('id') + '">' + $(elem).text() + '</a></li>');
+            getHeadlines(start, end, parseInt(current) + 1, elem);
+          });
+          toc.push('</ul>');
+        }
       }
     };
 
     // Ignore the cases where no header with startLevel exists
-    while($('h' + startLevel).length === 0){
+    while(startLevel <= maxDepth && $('h' + startLevel).length === 0){
       startLevel++;
     }
-    getHeadlines(startLevel, maxDepth);
+    if (startLevel <= maxDepth) {
+      getHeadlines(startLevel, maxDepth);
+    }
 
     return new hbs.handlebars.SafeString(toc.join(' '));
 
   });
-
 };
 
 module.exports = registerHelper;
