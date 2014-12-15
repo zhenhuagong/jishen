@@ -4,7 +4,7 @@
 #toc-wrapper {
   position: fixed;
   top: 40px;
-  left: 40px;
+  left: 10px;
   width: 0;
   margin: 0;
   padding: 0;
@@ -88,4 +88,34 @@
 
 .icon-renren:before {
     content: "\e60a";
+}
+
+/* ==========================================================================
+   10. Media Queries - smaller than 1280px
+   ========================================================================== */
+
+@media only screen and (max-width: 1279px) and (min-width: 900px) {
+  #toc-wrapper.show {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 899px) and (min-width: 500px) {
+  #toc-wrapper.show {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   11. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 499px) {
+  #toc-wrapper.show {
+    display: none;
+  }
 }
