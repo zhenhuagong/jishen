@@ -24,6 +24,12 @@ var PostToc = (function($){
         }
       },
 
+      /*
+      * @return:
+      *   -1, `tocParentId` needs to be specified
+      *   0,  no headers found
+      *   1,  return as expected
+      */
       generate: function(config){
         _.init(config);
         if (_.$tocParent) {
@@ -33,15 +39,16 @@ var PostToc = (function($){
             start++;
           }
           if (start > _.headerDepth) {
-            return;
+            return 0;
           }
           _.tocResult.push('<ul>');
           var toc = _.buildToc(start, _.headerDepth);
           _.tocResult.push('</ul>');
           _.$tocParent.html(toc);
+          return 1;
         }else{
           // `tocParentId` needs to be specified
-          return;
+          return -1;
         }
       },
 
