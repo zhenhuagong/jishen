@@ -11,6 +11,9 @@ var postScript = (function($){
         }else{  // Set width and height to zero
           $('#toc-wrapper').removeClass('show');
         }
+      },
+      toggleToc: function(){
+
       }
     };
 
@@ -28,6 +31,21 @@ var postScript = (function($){
       };
 
       $(document).off('scroll', scrollHandler).on('scroll', scrollHandler);
+
+      // Bind click event for expanding toc
+      $('#toc-wrapper .header-button a').click(function(){
+        if($(this).hasClass('icon-arrow-right')){
+          // display toc
+          $('#toc').show();
+          $(this).removeClass('icon-arrow-right');
+          $(this).addClass('icon-arrow-down');
+        }else{
+          // hide toc
+          $('#toc').hide();
+          $(this).removeClass('icon-arrow-down');
+          $(this).addClass('icon-arrow-right');
+        }
+      });
     });
   }
 })(jQuery);

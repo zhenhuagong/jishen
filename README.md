@@ -26,11 +26,12 @@ Jishen is still in progress.
 * Post
   * Add a comment plugin
     * Lazy loaded, or click to load
-  * Add weibo into share list
+  * ~~_[Done]_~~ Add weibo into share list
   * ~~_[Done]_~~ Set a better style for code block
     * Use [Prismjs](http://prismjs.com/) with Okaidia theme.
     * Language Support: CSS/C/JavaScript/Java/PHP/Bash/Python/Git
-  * Add an overlay of navigation outline for post content
+  * ~~_[Done]_~~ Add an overlay of navigation outline for post content
+    * Left: Responsive design for mobile
 
 ## Try for next release
 * Global

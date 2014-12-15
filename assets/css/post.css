@@ -10,8 +10,7 @@
   padding: 0;
   overflow: hidden;
   line-height: 1.5;
-  background-color: #F5F5DC;
-  /*transition: all 1s ease-in;*/
+  font-family: sans-serif, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";
 }
 
 #toc-wrapper.show {
@@ -23,9 +22,38 @@
 }
 
 #toc-wrapper .header {
-  font-weight: bold;
   padding-bottom: 7px;
   font-size: 1.25em;
+}
+
+#toc-wrapper .header .header-title {
+  display: inline-block;
+}
+
+#toc-wrapper .header .header-button {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  float: right;
+}
+
+#toc-wrapper .header a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #BBC7CC;
+}
+
+#toc-wrapper .header a:hover {
+  color: #50585D;
+}
+
+#toc-wrapper .header .icon-arrow-right:before {
+  content: "\e604";
+}
+
+#toc-wrapper .header .icon-arrow-down:before {
+  content: "\e602";
 }
 
 #toc {
@@ -34,9 +62,8 @@
 }
 
 #toc ul{
-  font-family: sans-serif, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";
   margin: 0 0.125em;
-  padding-left: 0.75em;
+  padding-left: 1em;
 }
 
 #toc li{
@@ -50,4 +77,15 @@
 
 #toc li a {
   text-decoration: none;
+}
+
+/* ==========================================================================
+   Share Icons
+   ========================================================================== */
+.icon-sina-weibo:before {
+    content: "\e60b";
+}
+
+.icon-renren:before {
+    content: "\e60a";
 }
