@@ -894,7 +894,7 @@ body:not(.post-template) .post-title {
 
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
